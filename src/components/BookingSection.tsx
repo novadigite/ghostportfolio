@@ -10,8 +10,8 @@ const BookingSection = () => {
   const { toast } = useToast();
 
   // Configuration Calendly
-  const CALENDLY_PUBLIC_URL = "https://calendly.com/votre-nom-utilisateur"; // Remplacer par votre lien public
-  const CALENDLY_TOKEN = ""; // Sera fourni par l'utilisateur
+  const CALENDLY_PUBLIC_URL = "https://calendly.com/bambadoutyibrahim"; 
+  const CALENDLY_TOKEN = "eyJraWQiOiIxY2UxZTEzNjE3ZGNmNzY2YjNjZWJjY2Y4ZGM1YmFmYThhNjVlNjg0MDIzZjdjMzJiZTgzNDliMjM4MDEzNWI0IiwidHlwIjoiUEFUIiwiYWxnIjoiRVMyNTYifQ.eyJpc3MiOiJodHRwczovL2F1dGguY2FsZW5kbHkuY29tIiwiaWF0IjoxNzU4NDg4MjcwLCJqdGkiOiJkNmRhNjg0OS02MjkwLTQ2NjUtYmFjYS0zZTM5MGFjZjYxY2UiLCJ1c2VyX3V1aWQiOiJkOThkZjJmYy04OTQ2LTRhMTUtYjFhNS02Nzk0YWQ3MzVmMjEifQ.G5kLoHLYuMRis8IIaryteaDIbZfBV57_EYjyYwlMedvgRZEy-T534it7R3zyBe6O3FNQe_i_7YKBKdVNsuu5qw";
 
   const openCalendlyWidget = () => {
     try {
