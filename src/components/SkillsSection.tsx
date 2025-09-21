@@ -16,21 +16,21 @@ const SkillsSection = () => {
       icon: Code,
       color: "text-brand-blue",
       glow: "blue-glow",
-      skills: ["Python", "Django", "HTML/CSS", "JavaScript", "API REST", "Bases de données"]
+      skills: ["Python", "Django", "HTML/CSS",]
     },
     {
       title: "Cybersécurité",
       icon: Lock,
       color: "text-brand-accent",
       glow: "neon-glow",
-      skills: ["Sécurisation des infrastructures", "Audit de sécurité", "Firewall", "IDS/IPS", "SIEM"]
+      skills: ["Sécurisation des infrastructures", "Audit de sécurité", "Firewall", "IDS/IPS"]
     },
     {
       title: "Production Numérique",
       icon: Camera,
       color: "text-brand-blue",
       glow: "blue-glow",
-      skills: ["Vibe Coding", "Production numérique", "Montage", "Streaming", "Compression"]
+      skills: ["no-code/low-code", "Production numérique", "Montage",]
     }
   ];
 
@@ -91,7 +91,7 @@ const SkillsSection = () => {
             {[
               "Configuration réseau", "Analyse forensique", "Gestion d'incidents", 
               "Audit de conformité", "Architecture sécurisée", "Tests d'intrusion",
-              "Cryptographie", "Authentification", "Monitoring", "DevSecOps"
+              "Cryptographie","Test d'intrusion réseau/Windows Serveur"
             ].map((skill, index) => (
               <span 
                 key={skill}

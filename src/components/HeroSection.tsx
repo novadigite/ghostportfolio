@@ -38,7 +38,7 @@ const HeroSection = () => {
             <p className="text-2xl lg:text-3xl font-medium text-foreground/85 mb-6 leading-relaxed">
               Passionné par la <span className="text-brand-accent font-semibold">cybersécurité</span>, 
               le <span className="text-brand-blue font-semibold">développement web</span> et 
-              le <span className="text-brand-accent font-semibold">vibe coding</span>.
+              <span className="text-brand-accent font-semibold">IA & no-code/low-code</span>.
             </p>
           </div>
 
@@ -47,7 +47,7 @@ const HeroSection = () => {
             <p className="text-lg text-muted-foreground leading-relaxed">
               Étudiant en Licence 3 Réseau et Sécurité Informatique, spécialisé dans la sécurisation 
               des infrastructures et le développement d'applications web avec Python/Django. 
-              Compétences supplémentaires : vibe coding et production numérique.
+              Compétences supplémentaires : IA & No-code/Low-Code
             </p>
           </div>
 

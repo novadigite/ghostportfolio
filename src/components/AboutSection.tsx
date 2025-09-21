@@ -20,7 +20,7 @@ const AboutSection = () => {
     {
       icon: Code,
       title: "Développement",
-      description: "Python/Django et production numérique avancée",
+      description: "Python/Django, No-code/Low-code",
       color: "text-blue-700"
     },
     {
@@ -67,7 +67,7 @@ const AboutSection = () => {
                 <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                   <p>
                     <strong className="text-foreground">Étudiant passionné</strong> en Licence 3 Réseau et Sécurité Informatique, 
-                    je me spécialise dans la <strong className="text-brand-accent">sécurisation des infrastructures</strong> et 
+                    je me spécialise dans la <strong className="text-brand-accent">Cybersécurité/Hacking ethique</strong> et 
                     le <strong className="text-brand-accent">développement d'applications web</strong> avec Python/Django.
                   </p>
                   <p>
