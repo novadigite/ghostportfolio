@@ -57,22 +57,19 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        blue: {
-          50: "hsl(var(--blue-50))",
-          100: "hsl(var(--blue-100))",
-          200: "hsl(var(--blue-200))",
-          300: "hsl(var(--blue-300))",
-          400: "hsl(var(--blue-400))",
-          500: "hsl(var(--blue-500))",
-          600: "hsl(var(--blue-600))",
-          700: "hsl(var(--blue-700))",
-          800: "hsl(var(--blue-800))",
-          900: "hsl(var(--blue-900))",
+        // Dark Theme Colors
+        dark: {
+          100: "hsl(var(--dark-100))",
+          200: "hsl(var(--dark-200))",
+          300: "hsl(var(--dark-300))",
+          400: "hsl(var(--dark-400))",
+          500: "hsl(var(--dark-500))",
+          600: "hsl(var(--dark-600))",
         },
-        certificate: {
-          primary: "hsl(var(--cert-primary))",
-          secondary: "hsl(var(--cert-secondary))",
-          accent: "hsl(var(--cert-accent))",
+        // Neon Colors
+        neon: {
+          green: "hsl(var(--neon-green))",
+          blue: "hsl(var(--neon-blue))",
         },
       },
       borderRadius: {
@@ -127,6 +124,28 @@ export default {
           "0%": { opacity: "0", transform: "translateY(30px)" },
           "100%": { opacity: "1", transform: "translateY(0)" }
         },
+        "neon-glow": {
+          "0%, 100%": { 
+            boxShadow: "0 0 20px hsl(var(--accent) / 0.5), 0 0 40px hsl(var(--accent) / 0.3)" 
+          },
+          "50%": { 
+            boxShadow: "0 0 30px hsl(var(--accent) / 0.8), 0 0 60px hsl(var(--accent) / 0.5)" 
+          },
+        },
+        "blue-glow": {
+          "0%, 100%": { 
+            boxShadow: "0 0 15px hsl(var(--secondary) / 0.4), 0 0 30px hsl(var(--secondary) / 0.2)" 
+          },
+          "50%": { 
+            boxShadow: "0 0 25px hsl(var(--secondary) / 0.6), 0 0 45px hsl(var(--secondary) / 0.4)" 
+          },
+        },
+        "bounce-in": {
+          "0%": { opacity: "0", transform: "scale(0.3)" },
+          "50%": { opacity: "1", transform: "scale(1.05)" },
+          "70%": { transform: "scale(0.9)" },
+          "100%": { opacity: "1", transform: "scale(1)" }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -137,6 +156,9 @@ export default {
         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
         "float": "float 4s ease-in-out infinite",
         "slide-up": "slide-up 0.8s ease-out",
+        "neon-glow": "neon-glow 2s ease-in-out infinite",
+        "blue-glow": "blue-glow 2.5s ease-in-out infinite",
+        "bounce-in": "bounce-in 0.8s ease-out",
       },
     },
   },

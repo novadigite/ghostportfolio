@@ -4,18 +4,19 @@ import { ArrowRight, Calendar, Github, Linkedin, Mail } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative py-32 px-4 bg-gradient-to-br from-blue-50 via-background to-blue-100 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute top-20 right-20 w-64 h-64 bg-blue-200/30 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-300/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+    <section className="relative py-32 px-4 bg-background overflow-hidden">
+      {/* Neon Background Effects */}
+      <div className="absolute top-20 right-20 w-64 h-64 bg-accent/20 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-20 left-20 w-80 h-80 bg-secondary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-accent/10 to-secondary/10 rounded-full blur-3xl opacity-50"></div>
       
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="flex flex-col items-center text-center space-y-8">
           {/* Avatar avec animation */}
-          <div className="animate-scale-in">
-            <Avatar className="w-40 h-40 border-4 border-primary/20 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div className="animate-bounce-in">
+            <Avatar className="w-40 h-40 border-4 border-accent/30 shadow-2xl hover:shadow-accent/50 transition-all duration-300 animate-neon-glow">
               <AvatarImage src="/placeholder.svg" alt="Bamba Douty Ibrahim" />
-              <AvatarFallback className="text-4xl font-bold bg-gradient-to-br from-primary to-blue-600 text-white">
+              <AvatarFallback className="text-4xl font-bold bg-gradient-to-br from-primary to-dark-600 text-accent">
                 BDI
               </AvatarFallback>
             </Avatar>
@@ -23,11 +24,11 @@ const HeroSection = () => {
           
           {/* Nom et titre avec animation */}
           <div className="space-y-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-primary via-blue-600 to-blue-500 bg-clip-text text-transparent">
+            <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-accent via-secondary to-accent bg-clip-text text-transparent">
               Bamba Douty Ibrahim
             </h1>
             
-            <h2 className="text-xl lg:text-2xl font-semibold text-muted-foreground">
+            <h2 className="text-xl lg:text-2xl font-semibold text-foreground/90">
               Étudiant en Réseau et Sécurité Informatique (Licence 3) | Programmeur Python & Django
             </h2>
           </div>
@@ -35,9 +36,9 @@ const HeroSection = () => {
           {/* Accroche principale */}
           <div className="animate-fade-in-up max-w-4xl" style={{ animationDelay: '0.4s' }}>
             <p className="text-2xl lg:text-3xl font-medium text-foreground/80 mb-6 leading-relaxed">
-              Passionné par la <span className="text-primary font-semibold">cybersécurité</span>, 
-              le <span className="text-blue-600 font-semibold">développement web</span> et 
-              le <span className="text-primary font-semibold">codage vidéo</span>.
+              Passionné par la <span className="text-accent font-semibold">cybersécurité</span>, 
+              le <span className="text-secondary font-semibold">développement web</span> et 
+              le <span className="text-accent font-semibold">codage vidéo</span>.
             </p>
           </div>
 
@@ -61,7 +62,7 @@ const HeroSection = () => {
                 key={social.label}
                 variant="outline"
                 size="icon"
-                className="w-12 h-12 rounded-full hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 hover:shadow-lg border-primary/20"
+                className="w-12 h-12 rounded-full border-secondary/30 text-secondary hover:bg-secondary hover:text-secondary-foreground hover:scale-110 hover:animate-blue-glow transition-all duration-300 hover:shadow-lg"
                 asChild
               >
                 <a href={social.href} aria-label={social.label}>
@@ -75,7 +76,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-6 pt-8 animate-fade-in-up" style={{ animationDelay: '1s' }}>
             <Button 
               size="lg" 
-              className="px-10 py-4 text-lg group bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-primary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="px-10 py-4 text-lg group bg-accent text-accent-foreground hover:bg-accent/90 hover:animate-neon-glow shadow-lg hover:shadow-accent/50 transition-all duration-300 hover:scale-105 font-semibold"
               asChild
             >
               <a href="#contact">
@@ -87,7 +88,7 @@ const HeroSection = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="px-10 py-4 text-lg border-primary/30 hover:bg-primary hover:text-primary-foreground hover:scale-105 transition-all duration-300 hover:shadow-lg" 
+              className="px-10 py-4 text-lg border-secondary/30 text-secondary hover:bg-secondary hover:text-secondary-foreground hover:scale-105 hover:animate-blue-glow transition-all duration-300 hover:shadow-lg font-semibold" 
               asChild
             >
               <a href="#booking">
@@ -99,10 +100,11 @@ const HeroSection = () => {
 
           {/* Compétences principales badges */}
           <div className="flex flex-wrap justify-center gap-3 pt-8 animate-slide-up" style={{ animationDelay: '1.2s' }}>
-            {["Réseaux", "Sécurité Informatique", "Analyse de vulnérabilités", "Ethical Hacking", "Python", "Django", "Video Coding"].map((skill) => (
+            {["Réseaux", "Sécurité Informatique", "Analyse de vulnérabilités", "Ethical Hacking", "Python", "Django", "Video Coding"].map((skill, index) => (
               <span 
                 key={skill}
-                className="px-4 py-2 bg-primary/10 text-primary border border-primary/20 rounded-full text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300 cursor-default"
+                className="px-4 py-2 bg-card border border-accent/20 text-accent rounded-full text-sm font-medium hover:bg-accent hover:text-accent-foreground hover:shadow-accent/30 transition-all duration-300 cursor-default animate-fade-in-up"
+                style={{ animationDelay: `${1.4 + index * 0.1}s` }}
               >
                 {skill}
               </span>

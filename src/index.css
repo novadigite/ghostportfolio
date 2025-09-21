@@ -8,78 +8,72 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 248 250 252;
-    --foreground: 203 23% 30%;
+    /* Dark Modern Theme - Bamba Douty Ibrahim Portfolio */
+    --background: 0 0% 7%; /* #121212 */
+    --foreground: 0 0% 88%; /* #E0E0E0 */
 
-    --card: 255 255 255;
-    --card-foreground: 203 23% 30%;
+    --card: 231 21% 12%; /* #1F1F2E with slight variation */
+    --card-foreground: 0 0% 88%;
 
-    --popover: 255 255 255;
-    --popover-foreground: 203 23% 30%;
+    --popover: 231 21% 12%;
+    --popover-foreground: 0 0% 88%;
 
-    /* Professional Blue Palette */
-    --primary: 217 91% 60%;
-    --primary-foreground: 255 255 255;
+    /* Primary Dark Blue */
+    --primary: 231 21% 14%; /* #1F1F2E */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 213 27% 84%;
-    --secondary-foreground: 203 23% 30%;
+    /* Neon Green Accent */
+    --accent: 160 100% 50%; /* #00FFAB */
+    --accent-foreground: 0 0% 0%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 215 16% 47%;
+    /* Bright Blue Secondary */
+    --secondary: 211 100% 53%; /* #0A84FF */
+    --secondary-foreground: 0 0% 100%;
 
-    --accent: 204 94% 94%;
-    --accent-foreground: 217 91% 60%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 63%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 217 91% 60%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 160 100% 50%;
 
     --radius: 0.75rem;
 
-    /* Professional Blue System */
-    --blue-50: 239 246 255;
-    --blue-100: 219 234 254;
-    --blue-200: 191 219 254;
-    --blue-300: 147 197 253;
-    --blue-400: 96 165 250;
-    --blue-500: 59 130 246;
-    --blue-600: 37 99 235;
-    --blue-700: 29 78 216;
-    --blue-800: 30 64 175;
-    --blue-900: 30 58 138;
+    /* Modern Dark System */
+    --dark-100: 0 0% 7%;
+    --dark-200: 0 0% 12%;
+    --dark-300: 0 0% 18%;
+    --dark-400: 231 21% 12%;
+    --dark-500: 231 21% 14%;
+    --dark-600: 231 21% 16%;
 
-    /* Certificate Colors */
-    --cert-primary: 217 91% 60%;
-    --cert-secondary: 213 27% 84%;
-    --cert-accent: 204 94% 94%;
-
+    /* Neon Colors */
+    --neon-green: 160 100% 50%; /* #00FFAB */
+    --neon-blue: 211 100% 53%; /* #0A84FF */
+    
     /* Professional Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--blue-600)), hsl(var(--blue-400)));
-    --gradient-card: linear-gradient(145deg, hsl(var(--blue-50)), hsl(var(--background)));
-    --shadow-professional: 0 20px 25px -5px hsl(var(--blue-900) / 0.1), 0 10px 10px -5px hsl(var(--blue-900) / 0.04);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--dark-600)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--dark-300)));
+    --gradient-neon: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--secondary)));
+    --shadow-neon: 0 0 30px hsl(var(--accent) / 0.3);
+    --shadow-blue: 0 0 20px hsl(var(--secondary) / 0.4);
+    --shadow-professional: 0 20px 25px -5px hsl(0 0% 0% / 0.3), 0 10px 10px -5px hsl(0 0% 0% / 0.2);
     
     /* Animation Variables */
     --animation-duration: 0.6s;
     --animation-ease: cubic-bezier(0.16, 1, 0.3, 1);
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 7%;
+    --sidebar-foreground: 0 0% 88%;
+    --sidebar-primary: 231 21% 14%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 88%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 160 100% 50%;
   }
 
   .dark {
