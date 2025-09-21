@@ -30,7 +30,7 @@ const SkillsSection = () => {
       icon: Camera,
       color: "text-secondary",
       glow: "blue-glow",
-      skills: ["Video Coding", "Production numérique", "Montage", "Streaming", "Compression"]
+      skills: ["Vibe Coding", "Production numérique", "Montage", "Streaming", "Compression"]
     }
   ];
 

@@ -38,7 +38,7 @@ const HeroSection = () => {
             <p className="text-2xl lg:text-3xl font-medium text-foreground/80 mb-6 leading-relaxed">
               Passionné par la <span className="text-accent font-semibold">cybersécurité</span>, 
               le <span className="text-secondary font-semibold">développement web</span> et 
-              le <span className="text-accent font-semibold">codage vidéo</span>.
+              le <span className="text-accent font-semibold">vibe coding</span>.
             </p>
           </div>
 
@@ -47,7 +47,7 @@ const HeroSection = () => {
             <p className="text-lg text-muted-foreground leading-relaxed">
               Étudiant en Licence 3 Réseau et Sécurité Informatique, spécialisé dans la sécurisation 
               des infrastructures et le développement d'applications web avec Python/Django. 
-              Compétences supplémentaires : vidéo coding et production numérique.
+              Compétences supplémentaires : vibe coding et production numérique.
             </p>
           </div>
 
@@ -100,7 +100,7 @@ const HeroSection = () => {
 
           {/* Compétences principales badges */}
           <div className="flex flex-wrap justify-center gap-3 pt-8 animate-slide-up" style={{ animationDelay: '1.2s' }}>
-            {["Réseaux", "Sécurité Informatique", "Analyse de vulnérabilités", "Ethical Hacking", "Python", "Django", "Video Coding"].map((skill, index) => (
+            {["Réseaux", "Sécurité Informatique", "Analyse de vulnérabilités", "Ethical Hacking", "Python", "Django", "Vibe Coding"].map((skill, index) => (
               <span 
                 key={skill}
                 className="px-4 py-2 bg-card border border-accent/20 text-accent rounded-full text-sm font-medium hover:bg-accent hover:text-accent-foreground hover:shadow-accent/30 transition-all duration-300 cursor-default animate-fade-in-up"

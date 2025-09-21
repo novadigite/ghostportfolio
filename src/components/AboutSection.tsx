@@ -78,7 +78,7 @@ const AboutSection = () => {
                     <strong className="text-primary"> analyse de vulnérabilités</strong>.
                   </p>
                   <p>
-                    En plus du développement web, je maîtrise le <strong className="text-primary">video coding</strong> et 
+                    En plus du développement web, je maîtrise le <strong className="text-primary">vibe coding</strong> et 
                     la <strong className="text-primary">production numérique</strong>, offrant ainsi une vision 
                     360° des technologies numériques modernes.
                   </p>
