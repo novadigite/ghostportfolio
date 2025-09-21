@@ -57,7 +57,7 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // Dark Theme Colors
+        // Professional Dark System
         dark: {
           100: "hsl(var(--dark-100))",
           200: "hsl(var(--dark-200))",
@@ -66,10 +66,11 @@ export default {
           500: "hsl(var(--dark-500))",
           600: "hsl(var(--dark-600))",
         },
-        // Neon Colors
-        neon: {
-          green: "hsl(var(--neon-green))",
-          blue: "hsl(var(--neon-blue))",
+        // Brand Colors - Exact Portfolio Colors
+        brand: {
+          dark: "hsl(var(--brand-dark))", /* #1F1F2E */
+          blue: "hsl(var(--brand-blue))", /* #0A84FF */
+          accent: "hsl(var(--brand-accent))", /* #00FFAB */
         },
       },
       borderRadius: {
@@ -94,71 +95,102 @@ export default {
             height: "0",
           },
         },
+        // Professional Portfolio Animations
         "fade-in-up": {
-          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "0%": { opacity: "0", transform: "translateY(25px)" },
           "100%": { opacity: "1", transform: "translateY(0)" }
         },
         "fade-in-left": {
-          "0%": { opacity: "0", transform: "translateX(-20px)" },
+          "0%": { opacity: "0", transform: "translateX(-25px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" }
+        },
+        "fade-in-right": {
+          "0%": { opacity: "0", transform: "translateX(25px)" },
           "100%": { opacity: "1", transform: "translateX(0)" }
         },
         "scale-in": {
-          "0%": { opacity: "0", transform: "scale(0.95)" },
+          "0%": { opacity: "0", transform: "scale(0.9)" },
           "100%": { opacity: "1", transform: "scale(1)" }
         },
-        "glow-pulse": {
-          "0%, 100%": { 
-            opacity: "1",
-            boxShadow: "0 0 20px hsl(var(--primary) / 0.3)" 
-          },
-          "50%": { 
-            opacity: "0.8",
-            boxShadow: "0 0 30px hsl(var(--primary) / 0.5)" 
-          },
+        "scale-hover": {
+          "0%": { transform: "scale(1)" },
+          "100%": { transform: "scale(1.05)" }
         },
         "float": {
           "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-8px)" },
+          "50%": { transform: "translateY(-10px)" },
         },
         "slide-up": {
-          "0%": { opacity: "0", transform: "translateY(30px)" },
+          "0%": { opacity: "0", transform: "translateY(40px)" },
           "100%": { opacity: "1", transform: "translateY(0)" }
+        },
+        "slide-down": {
+          "0%": { opacity: "0", transform: "translateY(-30px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" }
+        },
+        "bounce-in": {
+          "0%": { opacity: "0", transform: "scale(0.3)" },
+          "50%": { opacity: "1", transform: "scale(1.1)" },
+          "70%": { transform: "scale(0.95)" },
+          "100%": { opacity: "1", transform: "scale(1)" }
+        },
+        "pulse-glow": {
+          "0%, 100%": { 
+            opacity: "1",
+            boxShadow: "0 0 15px hsl(var(--brand-blue) / 0.3)" 
+          },
+          "50%": { 
+            opacity: "0.9",
+            boxShadow: "0 0 25px hsl(var(--brand-blue) / 0.5)" 
+          },
         },
         "neon-glow": {
           "0%, 100%": { 
-            boxShadow: "0 0 20px hsl(var(--accent) / 0.5), 0 0 40px hsl(var(--accent) / 0.3)" 
+            boxShadow: "0 0 20px hsl(var(--brand-accent) / 0.4), 0 0 40px hsl(var(--brand-accent) / 0.2)" 
           },
           "50%": { 
-            boxShadow: "0 0 30px hsl(var(--accent) / 0.8), 0 0 60px hsl(var(--accent) / 0.5)" 
+            boxShadow: "0 0 30px hsl(var(--brand-accent) / 0.6), 0 0 60px hsl(var(--brand-accent) / 0.4)" 
           },
         },
         "blue-glow": {
           "0%, 100%": { 
-            boxShadow: "0 0 15px hsl(var(--secondary) / 0.4), 0 0 30px hsl(var(--secondary) / 0.2)" 
+            boxShadow: "0 0 15px hsl(var(--brand-blue) / 0.4), 0 0 30px hsl(var(--brand-blue) / 0.2)" 
           },
           "50%": { 
-            boxShadow: "0 0 25px hsl(var(--secondary) / 0.6), 0 0 45px hsl(var(--secondary) / 0.4)" 
+            boxShadow: "0 0 25px hsl(var(--brand-blue) / 0.6), 0 0 45px hsl(var(--brand-blue) / 0.4)" 
           },
         },
-        "bounce-in": {
-          "0%": { opacity: "0", transform: "scale(0.3)" },
-          "50%": { opacity: "1", transform: "scale(1.05)" },
-          "70%": { transform: "scale(0.9)" },
-          "100%": { opacity: "1", transform: "scale(1)" }
+        "gradient-shift": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" }
+        },
+        "card-hover": {
+          "0%": { transform: "translateY(0) scale(1)" },
+          "100%": { transform: "translateY(-8px) scale(1.02)" }
         },
       },
       animation: {
+        // Base animations
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in-up": "fade-in-up 0.6s ease-out",
-        "fade-in-left": "fade-in-left 0.6s ease-out",
-        "scale-in": "scale-in 0.4s ease-out",
-        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
-        "float": "float 4s ease-in-out infinite",
-        "slide-up": "slide-up 0.8s ease-out",
-        "neon-glow": "neon-glow 2s ease-in-out infinite",
-        "blue-glow": "blue-glow 2.5s ease-in-out infinite",
-        "bounce-in": "bounce-in 0.8s ease-out",
+        
+        // Professional entrance animations
+        "fade-in-up": "fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1)",
+        "fade-in-left": "fade-in-left 0.8s cubic-bezier(0.16, 1, 0.3, 1)",
+        "fade-in-right": "fade-in-right 0.8s cubic-bezier(0.16, 1, 0.3, 1)",
+        "scale-in": "scale-in 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
+        "slide-up": "slide-up 0.9s cubic-bezier(0.16, 1, 0.3, 1)",
+        "slide-down": "slide-down 0.7s cubic-bezier(0.16, 1, 0.3, 1)",
+        "bounce-in": "bounce-in 1s cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+        
+        // Interactive animations
+        "float": "float 6s ease-in-out infinite",
+        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
+        "neon-glow": "neon-glow 2.5s ease-in-out infinite",
+        "blue-glow": "blue-glow 3s ease-in-out infinite",
+        "gradient-shift": "gradient-shift 4s ease-in-out infinite",
+        "card-hover": "card-hover 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
       },
     },
   },

@@ -43,7 +43,7 @@ const ProjectsSection = () => {
     <section id="projects" className="py-20 px-4 bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-brand-accent to-brand-blue bg-clip-text text-transparent">
             Travaux Réalisés
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -58,11 +58,11 @@ const ProjectsSection = () => {
               className="animate-fade-in-up"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <Card className="group h-full hover:shadow-2xl hover:shadow-accent/20 hover:-translate-y-2 transition-all duration-500 border-accent/20 hover:border-accent/40 bg-card hover:bg-gradient-to-br hover:from-card hover:to-dark-300">
+              <Card className="group h-full hover:shadow-2xl hover:shadow-brand-accent/20 hover:-translate-y-3 transition-all duration-500 border-brand-accent/20 hover:border-brand-blue/40 bg-gradient-to-br from-card to-dark-200 hover:animate-card-hover">
                 <CardHeader>
                   <div className="flex items-start justify-between">
                     <div className="space-y-2">
-                      <CardTitle className="text-2xl text-foreground group-hover:text-accent transition-colors duration-300">
+                      <CardTitle className="text-2xl text-foreground group-hover:text-brand-accent transition-colors duration-300">
                         {project.title}
                       </CardTitle>
                       <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -83,7 +83,7 @@ const ProjectsSection = () => {
                       <Badge 
                         key={tag}
                         variant="secondary" 
-                        className="bg-dark-200/60 backdrop-blur-sm text-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-300 cursor-default border border-secondary/20"
+                        className="bg-brand-blue/10 text-brand-blue border-brand-blue/20 hover:bg-brand-blue hover:text-white transition-all duration-300 cursor-default"
                       >
                         {tag}
                       </Badge>
@@ -96,7 +96,7 @@ const ProjectsSection = () => {
                         <Button 
                           variant="default" 
                           size="sm" 
-                          className="flex-1 group/btn bg-accent text-accent-foreground hover:bg-accent/90 hover:animate-neon-glow transition-all duration-300"
+                          className="flex-1 group/btn bg-brand-accent text-black hover:bg-brand-accent/90 hover:animate-neon-glow transition-all duration-300 font-semibold"
                         >
                           <ExternalLink className="h-4 w-4 mr-2 group-hover/btn:scale-110 transition-transform" />
                           Voir le Projet
@@ -104,7 +104,7 @@ const ProjectsSection = () => {
                         <Button 
                           variant="outline" 
                           size="sm" 
-                          className="border-secondary/30 text-secondary hover:bg-secondary hover:text-secondary-foreground hover:animate-blue-glow transition-all duration-300"
+                          className="border-brand-blue/30 text-brand-blue hover:bg-brand-blue hover:text-white hover:animate-blue-glow transition-all duration-300"
                         >
                           <Github className="h-4 w-4 mr-2" />
                           Code
@@ -118,23 +118,23 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        {/* Portfolio stats */}
+        {/* Professional portfolio stats */}
         <div className="mt-16 text-center animate-slide-up">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="space-y-2">
-              <div className="text-4xl font-bold text-accent">4</div>
+            <div className="space-y-2 group cursor-default">
+              <div className="text-5xl font-bold text-brand-accent group-hover:animate-neon-glow transition-all duration-300">4</div>
               <div className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Projets Complétés</div>
             </div>
-            <div className="space-y-2">
-              <div className="text-4xl font-bold text-secondary">100%</div>
+            <div className="space-y-2 group cursor-default">
+              <div className="text-5xl font-bold text-brand-blue group-hover:animate-blue-glow transition-all duration-300">100%</div>
               <div className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Taux de Réussite</div>
             </div>
-            <div className="space-y-2">
-              <div className="text-4xl font-bold text-accent">5+</div>
+            <div className="space-y-2 group cursor-default">
+              <div className="text-5xl font-bold text-brand-accent group-hover:animate-neon-glow transition-all duration-300">5+</div>
               <div className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Technologies Utilisées</div>
             </div>
-            <div className="space-y-2">
-              <div className="text-4xl font-bold text-secondary">2024-2025</div>
+            <div className="space-y-2 group cursor-default">
+              <div className="text-5xl font-bold text-brand-blue group-hover:animate-blue-glow transition-all duration-300">2024-2025</div>
               <div className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Période Active</div>
             </div>
           </div>

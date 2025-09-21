@@ -9,8 +9,8 @@ const CertificatesSection = () => {
       organization: "Networking Academy",
       date: "Jul 09, 2025",
       icon: Shield,
-      color: "text-primary",
-      bgColor: "bg-primary/10",
+      color: "text-brand-accent",
+      bgColor: "bg-brand-accent/10",
       description: "Parcours complet d'analyste en cybersécurité junior"
     },
     {
@@ -18,8 +18,8 @@ const CertificatesSection = () => {
       organization: "Networking Academy", 
       date: "May 17, 2025",
       icon: Award,
-      color: "text-blue-600",
-      bgColor: "bg-blue-100",
+      color: "text-brand-blue",
+      bgColor: "bg-brand-blue/10",
       description: "Fondements de la cybersécurité et bonnes pratiques"
     },
     {
@@ -27,18 +27,18 @@ const CertificatesSection = () => {
       organization: "Networking Academy",
       date: "Apr 18, 2025", 
       icon: Shield,
-      color: "text-blue-700",
-      bgColor: "bg-blue-200/50",
+      color: "text-brand-accent",
+      bgColor: "bg-brand-accent/10",
       description: "Techniques de test d'intrusion et hacking éthique"
     }
   ];
 
   return (
-    <section id="certificates" className="py-20 px-4 bg-gradient-to-b from-blue-50/50 to-background">
+    <section id="certificates" className="py-20 px-4 bg-gradient-to-b from-background to-dark-200">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <div className="animate-fade-in-up">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-brand-accent to-brand-blue bg-clip-text text-transparent">
               Certificats & Parcours
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -56,12 +56,12 @@ const CertificatesSection = () => {
                 className="animate-fade-in-up hover:animate-none"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <Card className="group h-full hover:shadow-xl hover:-translate-y-2 transition-all duration-500 border-primary/10 hover:border-primary/30 bg-gradient-to-br from-card to-blue-50/30">
+                <Card className="group h-full hover:shadow-2xl hover:shadow-brand-blue/20 hover:-translate-y-3 transition-all duration-500 border-brand-blue/20 hover:border-brand-accent/40 bg-gradient-to-br from-card to-dark-200 hover:animate-card-hover">
                   <CardHeader className="text-center pb-4">
-                    <div className={`mx-auto w-20 h-20 rounded-full ${cert.bgColor} flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300 shadow-lg`}>
+                    <div className={`mx-auto w-20 h-20 rounded-full ${cert.bgColor} flex items-center justify-center mb-4 group-hover:scale-110 group-hover:animate-pulse-glow transition-all duration-300 shadow-lg`}>
                       <IconComponent className={`h-10 w-10 ${cert.color}`} />
                     </div>
-                    <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors duration-300">
+                    <CardTitle className="text-xl font-bold group-hover:text-brand-accent transition-colors duration-300">
                       {cert.title}
                     </CardTitle>
                   </CardHeader>
@@ -69,7 +69,7 @@ const CertificatesSection = () => {
                   <CardContent className="text-center space-y-4">
                     <Badge 
                       variant="secondary" 
-                      className="bg-primary/10 text-primary border-primary/20 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                      className="bg-brand-blue/10 text-brand-blue border-brand-blue/20 hover:bg-brand-blue hover:text-white transition-all duration-300"
                     >
                       {cert.organization}
                     </Badge>
@@ -89,19 +89,19 @@ const CertificatesSection = () => {
           })}
         </div>
 
-        {/* Stats section */}
+        {/* Professional stats section */}
         <div className="mt-16 text-center animate-slide-up">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="space-y-2">
-              <div className="text-4xl font-bold text-primary">3</div>
+            <div className="space-y-2 group cursor-default">
+              <div className="text-5xl font-bold text-brand-accent group-hover:animate-neon-glow transition-all duration-300">3</div>
               <div className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Certificats</div>
             </div>
-            <div className="space-y-2">
-              <div className="text-4xl font-bold text-blue-600">2025</div>
+            <div className="space-y-2 group cursor-default">
+              <div className="text-5xl font-bold text-brand-blue group-hover:animate-blue-glow transition-all duration-300">2025</div>
               <div className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Année Active</div>
             </div>
-            <div className="space-y-2">
-              <div className="text-4xl font-bold text-primary">L3</div>
+            <div className="space-y-2 group cursor-default">
+              <div className="text-5xl font-bold text-brand-accent group-hover:animate-neon-glow transition-all duration-300">L3</div>
               <div className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Niveau Actuel</div>
             </div>
           </div>

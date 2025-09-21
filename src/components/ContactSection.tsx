@@ -77,10 +77,10 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-4 bg-gradient-to-b from-background to-blue-50/50">
+    <section id="contact" className="py-20 px-4 bg-gradient-to-b from-background to-dark-200">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-brand-accent to-brand-blue bg-clip-text text-transparent">
             Contact
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -91,10 +91,10 @@ const ContactSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Formulaire de contact */}
           <div className="animate-fade-in-left">
-            <Card className="border-primary/10 bg-gradient-to-br from-card to-blue-50/30">
+            <Card className="border-brand-blue/20 bg-gradient-to-br from-card to-dark-200 hover:shadow-2xl hover:shadow-brand-blue/10 transition-all duration-500">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-2xl">
-                  <Mail className="h-6 w-6 text-primary" />
+                  <Mail className="h-6 w-6 text-brand-accent" />
                   Envoyez-moi un message
                 </CardTitle>
               </CardHeader>
@@ -109,7 +109,7 @@ const ContactSection = () => {
                       onChange={handleInputChange}
                       placeholder="Votre nom"
                       required
-                      className="mt-1 border-primary/20 focus:border-primary transition-colors"
+                      className="mt-1 border-brand-blue/20 focus:border-brand-accent transition-colors bg-dark-300/50"
                     />
                   </div>
                   
@@ -123,7 +123,7 @@ const ContactSection = () => {
                       onChange={handleInputChange}
                       placeholder="votre.email@exemple.com"
                       required
-                      className="mt-1 border-primary/20 focus:border-primary transition-colors"
+                      className="mt-1 border-brand-blue/20 focus:border-brand-accent transition-colors bg-dark-300/50"
                     />
                   </div>
                   
@@ -137,14 +137,14 @@ const ContactSection = () => {
                       placeholder="Décrivez votre projet ou votre question..."
                       rows={5}
                       required
-                      className="mt-1 border-primary/20 focus:border-primary transition-colors resize-none"
+                      className="mt-1 border-brand-blue/20 focus:border-brand-accent transition-colors resize-none bg-dark-300/50"
                     />
                   </div>
                   
                   <Button 
                     type="submit"
                     size="lg"
-                    className="w-full bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-primary group animate-fade-in-up hover:shadow-lg transition-all duration-300"
+                    className="w-full bg-brand-accent text-black hover:bg-brand-accent/90 group animate-fade-in-up hover:shadow-lg hover:animate-neon-glow transition-all duration-300 font-semibold"
                     style={{ animationDelay: '0.4s' }}
                   >
                     <Send className="h-5 w-5 mr-2 group-hover:translate-x-1 transition-transform" />
@@ -156,15 +156,15 @@ const ContactSection = () => {
           </div>
 
           {/* Informations de contact et réseaux sociaux */}
-          <div className="space-y-8 animate-fade-in-left" style={{ animationDelay: '0.2s' }}>
-            <Card className="border-primary/10 bg-gradient-to-br from-card to-blue-50/30">
+          <div className="space-y-8 animate-fade-in-right" style={{ animationDelay: '0.2s' }}>
+            <Card className="border-brand-blue/20 bg-gradient-to-br from-card to-dark-200 hover:shadow-2xl hover:shadow-brand-blue/10 transition-all duration-500">
               <CardHeader>
                 <CardTitle className="text-2xl">Restons connectés</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <Mail className="h-5 w-5 text-primary" />
+                    <Mail className="h-5 w-5 text-brand-accent" />
                     <span className="text-muted-foreground">contact@bambadoutyibrahim.com</span>
                   </div>
                 </div>
@@ -178,7 +178,7 @@ const ContactSection = () => {
                         <Button
                           key={social.name}
                           variant="outline"
-                          className={`justify-start gap-3 border-primary/20 ${social.color} ${social.bgColor} transition-all duration-300 hover:scale-105 hover:shadow-md`}
+                          className="justify-start gap-3 border-brand-blue/30 text-brand-blue hover:bg-brand-blue hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-md hover:animate-blue-glow"
                           asChild
                         >
                           <a href={social.url} target="_blank" rel="noopener noreferrer">
@@ -191,8 +191,8 @@ const ContactSection = () => {
                   </div>
                 </div>
 
-                <div className="p-4 bg-primary/5 rounded-lg border border-primary/10">
-                  <h4 className="font-semibold text-primary mb-2">Disponibilité</h4>
+                <div className="p-4 bg-brand-accent/10 rounded-lg border border-brand-accent/20">
+                  <h4 className="font-semibold text-brand-accent mb-2">Disponibilité</h4>
                   <p className="text-sm text-muted-foreground">
                     Ouvert aux opportunités de stage, projets étudiants et collaborations 
                     dans le domaine de la cybersécurité et du développement web.

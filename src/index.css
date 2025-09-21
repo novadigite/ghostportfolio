@@ -8,63 +8,71 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Dark Modern Theme - Bamba Douty Ibrahim Portfolio */
-    --background: 0 0% 7%; /* #121212 */
-    --foreground: 0 0% 88%; /* #E0E0E0 */
+    /* Professional Blue Portfolio Theme - Bamba Douty Ibrahim */
+    --background: 0 0% 3%; /* Deep dark background */
+    --foreground: 210 15% 85%; /* Soft white */
 
-    --card: 231 21% 12%; /* #1F1F2E with slight variation */
-    --card-foreground: 0 0% 88%;
+    --card: 231 21% 12%; /* #1F1F2E exact match */
+    --card-foreground: 210 15% 85%;
 
     --popover: 231 21% 12%;
-    --popover-foreground: 0 0% 88%;
+    --popover-foreground: 210 15% 85%;
 
-    /* Primary Dark Blue */
-    --primary: 231 21% 14%; /* #1F1F2E */
+    /* Primary: Exact Blue Dark (#1F1F2E) */
+    --primary: 231 21% 14%; /* #1F1F2E exact */
     --primary-foreground: 0 0% 100%;
 
-    /* Neon Green Accent */
-    --accent: 160 100% 50%; /* #00FFAB */
+    /* Accent: Exact Neon Green (#00FFAB) */
+    --accent: 160 100% 50%; /* #00FFAB exact */
     --accent-foreground: 0 0% 0%;
 
-    /* Bright Blue Secondary */
-    --secondary: 211 100% 53%; /* #0A84FF */
+    /* Secondary: Exact Bright Blue (#0A84FF) */
+    --secondary: 211 100% 53%; /* #0A84FF exact */
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 63%;
+    --muted: 231 21% 8%;
+    --muted-foreground: 210 15% 65%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 15%;
+    --border: 231 21% 18%;
+    --input: 231 21% 10%;
     --ring: 160 100% 50%;
 
-    --radius: 0.75rem;
+    --radius: 0.875rem;
 
-    /* Modern Dark System */
-    --dark-100: 0 0% 7%;
-    --dark-200: 0 0% 12%;
-    --dark-300: 0 0% 18%;
-    --dark-400: 231 21% 12%;
-    --dark-500: 231 21% 14%;
-    --dark-600: 231 21% 16%;
+    /* Professional Blue System */
+    --dark-100: 0 0% 3%;
+    --dark-200: 231 21% 8%;
+    --dark-300: 231 21% 12%;
+    --dark-400: 231 21% 14%;
+    --dark-500: 231 21% 16%;
+    --dark-600: 231 21% 18%;
 
-    /* Neon Colors */
-    --neon-green: 160 100% 50%; /* #00FFAB */
-    --neon-blue: 211 100% 53%; /* #0A84FF */
+    /* Brand Colors - Exact Match */
+    --brand-dark: 231 21% 14%; /* #1F1F2E */
+    --brand-blue: 211 100% 53%; /* #0A84FF */
+    --brand-accent: 160 100% 50%; /* #00FFAB */
     
     /* Professional Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--dark-600)));
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--dark-300)));
-    --gradient-neon: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--secondary)));
-    --shadow-neon: 0 0 30px hsl(var(--accent) / 0.3);
-    --shadow-blue: 0 0 20px hsl(var(--secondary) / 0.4);
-    --shadow-professional: 0 20px 25px -5px hsl(0 0% 0% / 0.3), 0 10px 10px -5px hsl(0 0% 0% / 0.2);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-dark)), hsl(var(--dark-500)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--dark-200)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--brand-accent)), hsl(var(--brand-blue)));
+    --gradient-blue: linear-gradient(135deg, hsl(var(--brand-blue)), hsl(var(--brand-dark)));
     
-    /* Animation Variables */
-    --animation-duration: 0.6s;
-    --animation-ease: cubic-bezier(0.16, 1, 0.3, 1);
+    /* Professional Shadows */
+    --shadow-neon: 0 0 40px hsl(var(--brand-accent) / 0.4);
+    --shadow-blue: 0 0 30px hsl(var(--brand-blue) / 0.3);
+    --shadow-elegant: 0 20px 25px -5px hsl(0 0% 0% / 0.4), 0 10px 10px -5px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.2);
+    
+    /* Animation System */
+    --animation-fast: 0.2s;
+    --animation-normal: 0.4s;
+    --animation-slow: 0.6s;
+    --ease-professional: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 7%;
     --sidebar-foreground: 0 0% 88%;
