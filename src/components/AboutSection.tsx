@@ -47,8 +47,8 @@ const AboutSection = () => {
           {/* Photo/Avatar */}
           <div className="flex justify-center lg:justify-start animate-scale-in">
             <div className="relative">
-              <Avatar className="w-80 h-80 border-8 border-brand-accent/20 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 hover:animate-neon-glow">
-                <AvatarImage src="/placeholder.svg" alt="Bamba Douty Ibrahim" />
+               <Avatar className="w-80 h-80 border-8 border-brand-accent/20 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 hover:animate-neon-glow">
+                 <AvatarImage src="/profile-photo.jpg" alt="Bamba Douty Ibrahim" />
                 <AvatarFallback className="text-6xl font-bold bg-gradient-to-br from-brand-dark to-brand-blue text-brand-accent">
                   BDI
                 </AvatarFallback>

@@ -15,7 +15,7 @@ const HeroSection = () => {
           {/* Professional Avatar with premium animations */}
           <div className="animate-bounce-in">
             <Avatar className="w-44 h-44 border-4 border-brand-accent/30 shadow-2xl hover:shadow-brand-accent/50 transition-all duration-500 hover:animate-neon-glow">
-              <AvatarImage src="/placeholder.svg" alt="Bamba Douty Ibrahim" />
+              <AvatarImage src="/profile-photo.jpg" alt="Bamba Douty Ibrahim" />
               <AvatarFallback className="text-5xl font-bold bg-gradient-to-br from-brand-dark to-dark-600 text-brand-accent">
                 BDI
               </AvatarFallback>
