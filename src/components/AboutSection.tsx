@@ -1,52 +1,146 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Shield, GraduationCap, Code, Network } from "lucide-react";
 
 const AboutSection = () => {
+  const highlights = [
+    {
+      icon: GraduationCap,
+      title: "Formation Académique",
+      description: "Étudiant en Licence 3 Réseau et Sécurité Informatique",
+      color: "text-primary"
+    },
+    {
+      icon: Shield,
+      title: "Cybersécurité",
+      description: "Spécialisé dans la sécurisation des infrastructures",
+      color: "text-blue-600"
+    },
+    {
+      icon: Code,
+      title: "Développement",
+      description: "Python/Django et production numérique avancée",
+      color: "text-blue-700"
+    },
+    {
+      icon: Network,
+      title: "Réseaux",
+      description: "Administration et configuration réseau",
+      color: "text-blue-500"
+    }
+  ];
+
   return (
-    <section id="about" className="py-20 px-4 bg-muted/30">
+    <section id="about" className="py-20 px-4 bg-gradient-to-b from-background to-blue-50/50">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+        <div className="text-center mb-16 animate-fade-in-up">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
             À propos
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Découvrez mon parcours et ma passion pour le développement
+            Découvrez mon parcours et ma passion pour la cybersécurité et le développement
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
           {/* Photo/Avatar */}
-          <div className="flex justify-center lg:justify-start">
-            <Avatar className="w-80 h-80 border-8 border-primary/20 shadow-2xl">
-              <AvatarImage src="/placeholder.svg" alt="Développeur" />
-              <AvatarFallback className="text-6xl font-bold bg-primary/10 text-primary">
-                DEV
-              </AvatarFallback>
-            </Avatar>
+          <div className="flex justify-center lg:justify-start animate-scale-in">
+            <div className="relative">
+              <Avatar className="w-80 h-80 border-8 border-primary/20 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105">
+                <AvatarImage src="/placeholder.svg" alt="Bamba Douty Ibrahim" />
+                <AvatarFallback className="text-6xl font-bold bg-gradient-to-br from-primary to-blue-600 text-white">
+                  BDI
+                </AvatarFallback>
+              </Avatar>
+              <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium shadow-lg">
+                Étudiant L3
+              </div>
+            </div>
           </div>
 
-          {/* Présentation */}
-          <div className="space-y-6">
-            <Card className="border-l-4 border-l-primary">
+          {/* Présentation principale */}
+          <div className="space-y-8 animate-fade-in-left">
+            <Card className="border-l-8 border-l-primary shadow-lg bg-gradient-to-br from-card to-blue-50/30">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4 text-primary">Développeur Passionné</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  Je suis un développeur passionné spécialisé dans les technologies <strong>Python & Django</strong>, 
-                  avec une expertise particulière dans le développement web moderne et les solutions no-code/low-code.
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  Mon approche combine la puissance du développement traditionnel avec l'efficacité des outils 
-                  no-code comme <strong>Lovable</strong> et <strong>Webflow</strong>, permettant de créer des 
-                  solutions rapides et professionnelles.
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Avec une solide compréhension des réseaux informatiques et une passion pour l'intégration d'API, 
-                  je transforme les idées en applications web fonctionnelles et esthétiques.
-                </p>
+                <h3 className="text-3xl font-bold mb-6 text-primary">Bamba Douty Ibrahim</h3>
+                <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                  <p>
+                    <strong className="text-foreground">Étudiant passionné</strong> en Licence 3 Réseau et Sécurité Informatique, 
+                    je me spécialise dans la <strong className="text-primary">sécurisation des infrastructures</strong> et 
+                    le <strong className="text-primary">développement d'applications web</strong> avec Python/Django.
+                  </p>
+                  <p>
+                    Mon parcours combine la <strong className="text-foreground">rigueur académique</strong> avec une 
+                    approche pratique des technologies modernes. Passionné par la 
+                    <strong className="text-primary"> cybersécurité</strong>, j'ai développé des compétences en 
+                    <strong className="text-primary"> ethical hacking</strong> et 
+                    <strong className="text-primary"> analyse de vulnérabilités</strong>.
+                  </p>
+                  <p>
+                    En plus du développement web, je maîtrise le <strong className="text-primary">video coding</strong> et 
+                    la <strong className="text-primary">production numérique</strong>, offrant ainsi une vision 
+                    360° des technologies numériques modernes.
+                  </p>
+                </div>
               </CardContent>
             </Card>
           </div>
         </div>
+
+        {/* Points forts */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 animate-slide-up">
+          {highlights.map((highlight, index) => {
+            const IconComponent = highlight.icon;
+            return (
+              <Card 
+                key={index} 
+                className="group text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-500 border-primary/10 hover:border-primary/30 bg-gradient-to-br from-card to-blue-50/30"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardContent className="p-6">
+                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300">
+                    <IconComponent className={`h-8 w-8 ${highlight.color}`} />
+                  </div>
+                  <h4 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors">
+                    {highlight.title}
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    {highlight.description}
+                  </p>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+
+        {/* Objectifs et motivation */}
+        <Card className="mt-16 bg-gradient-to-r from-primary/5 via-blue-50/50 to-primary/5 border-primary/20 animate-fade-in-up">
+          <CardContent className="p-8 text-center">
+            <h3 className="text-2xl font-bold mb-6 text-primary">Vision & Objectifs</h3>
+            <div className="max-w-4xl mx-auto space-y-4 text-lg">
+              <p className="text-muted-foreground leading-relaxed">
+                Mon objectif est de devenir un <strong className="text-foreground">expert en cybersécurité</strong> 
+                capable de protéger les infrastructures numériques tout en développant des solutions 
+                web innovantes et sécurisées.
+              </p>
+              <div className="flex flex-wrap justify-center gap-3 mt-6">
+                {[
+                  "Sécurité des systèmes", "Développement sécurisé", "Analyse forensique", 
+                  "Architecture réseau", "Innovation technologique"
+                ].map((goal) => (
+                  <Badge 
+                    key={goal} 
+                    variant="secondary" 
+                    className="px-4 py-2 bg-primary/10 text-primary border-primary/20 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                  >
+                    {goal}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );
