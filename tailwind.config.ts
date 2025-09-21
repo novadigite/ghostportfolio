@@ -57,6 +57,12 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        booking: {
+          primary: "hsl(var(--booking-primary))",
+          secondary: "hsl(var(--booking-secondary))",
+          accent: "hsl(var(--booking-accent))",
+          glow: "hsl(var(--booking-glow))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +86,26 @@ export default {
             height: "0",
           },
         },
+        "glow": {
+          "0%, 100%": { 
+            opacity: "1",
+            boxShadow: "0 0 20px hsl(var(--booking-glow) / 0.4)" 
+          },
+          "50%": { 
+            opacity: "0.8",
+            boxShadow: "0 0 30px hsl(var(--booking-glow) / 0.6)" 
+          },
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "glow": "glow 2s ease-in-out infinite",
+        "float": "float 3s ease-in-out infinite",
       },
     },
   },

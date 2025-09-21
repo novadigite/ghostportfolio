@@ -38,6 +38,15 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
+    /* Booking Section Colors */
+    --booking-primary: 215 28% 17%;
+    --booking-secondary: 142 76% 36%;
+    --booking-accent: 268 83% 58%;
+    --booking-glow: 142 76% 36%;
+    --gradient-booking: linear-gradient(135deg, hsl(var(--booking-primary)), hsl(var(--booking-secondary)));
+    --gradient-booking-hover: linear-gradient(135deg, hsl(var(--booking-secondary)), hsl(var(--booking-accent)));
+    --shadow-booking: 0 20px 40px -10px hsl(var(--booking-glow) / 0.3);
+
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
