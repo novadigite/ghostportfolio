@@ -19,7 +19,7 @@ const ChatBot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      content: "Bonjour ! Je suis l'assistant virtuel de Bamba Douty Ibrahim. Je peux vous renseigner sur son parcours, ses compétences, ses projets et vous aider à le contacter. Comment puis-je vous aider ?",
+      content: "Bonjour ! Je suis l'assistant virtuel d'un développeur web passionné. Je peux vous renseigner sur ses compétences en Python/Django, no-code/low-code, ses projets et vous aider à le contacter. Comment puis-je vous aider ?",
       role: 'assistant',
       timestamp: new Date()
     }
@@ -46,23 +46,23 @@ const ChatBot = () => {
       const { data, error } = await supabase.functions.invoke('chat-assistant', {
         body: {
           message: inputMessage,
-          context: `Tu es l'assistant virtuel de Bamba Douty Ibrahim, étudiant en Licence 3 Réseau et Sécurité Informatique. 
-          
-          Informations sur Bamba :
-          - Spécialisé en analyse de menaces et sécurisation d'infrastructures
-          - Programmeur Python & Django
-          - Compétences en codage vidéo et production numérique
-          - Certifications : Junior Cybersecurity Analyst Career Path, Introduction to Cybersecurity, Ethical Hacker (Penetration Testing)
-          - Projets : Ahloulbait, DECI-ONG, Cheikh Tidjane Digital Sanctuary, Boulay Beach VIP Invite
-          - Passionné par la cybersécurité, le développement web et le codage vidéo
-          
-          Tu peux aider les visiteurs à :
-          - En apprendre plus sur son parcours et ses compétences
-          - Découvrir ses projets et certifications
-          - Le contacter via le formulaire de contact
-          - Prendre rendez-vous via Calendly
-          
-          Réponds de manière professionnelle, amicale et précise. Si on te demande de le contacter, dirige vers la section contact ou propose Calendly.`
+        context: `Tu es l'assistant virtuel d'un développeur web passionné spécialisé en Python/Django et no-code/low-code (Lovable, Webflow). 
+        
+        Informations sur le développeur :
+        - Spécialisé en développement web avec Python & Django
+        - Expert en no-code/low-code : Lovable, Webflow
+        - Compétences en gestion d'API et intégrations
+        - Solide compréhension des réseaux informatiques (DHCP, DNS, VLAN, OSPF)
+        - Projets : ahloulbait, deci-ong, cheikh-tidjane-digital-sanctuary, boulay-beach-vip-invite
+        - Passionné par les solutions web modernes et efficaces
+        
+        Tu peux aider les visiteurs à :
+        - En apprendre plus sur ses compétences en développement
+        - Découvrir ses projets et réalisations
+        - Le contacter via le formulaire de contact
+        - Prendre rendez-vous via Calendly
+        
+        Réponds de manière professionnelle, amicale et précise. Si on te demande de le contacter, dirige vers la section contact ou propose Calendly.`
         }
       });
 
@@ -88,7 +88,7 @@ const ChatBot = () => {
       
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
-        content: "Désolé, je rencontre des difficultés techniques. N'hésitez pas à utiliser le formulaire de contact en bas de page pour joindre directement Bamba.",
+        content: "Désolé, je rencontre des difficultés techniques. N'hésitez pas à utiliser le formulaire de contact en bas de page pour joindre directement le développeur.",
         role: 'assistant',
         timestamp: new Date()
       };
@@ -123,7 +123,7 @@ const ChatBot = () => {
       {isOpen && (
         <Card className="fixed bottom-6 right-6 w-96 h-[500px] shadow-xl z-40 flex flex-col">
           <CardHeader className="flex flex-row items-center justify-between py-3">
-            <CardTitle className="text-lg">Assistant IA - Bamba Douty Ibrahim</CardTitle>
+            <CardTitle className="text-lg">Assistant IA - Développeur Web</CardTitle>
             <Button
               variant="ghost"
               size="icon"

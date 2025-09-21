@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
+import { Calendar, Send, ExternalLink, Youtube, Music, Facebook, Instagram } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { Mail, Calendar, Send } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -71,153 +71,157 @@ const ContactSection = () => {
   };
 
   const openCalendly = () => {
-    // Pour l'intégration Calendly, vous devrez remplacer cette URL par votre lien Calendly personnel
-    window.open('https://calendly.com/bamba-ibrahim', '_blank');
+    // Remplacez cette URL par votre lien Calendly personnel avec votre token
+    window.open('https://calendly.com/votre-lien-calendly', '_blank');
   };
 
   return (
-    <section id="contact" className="py-20 bg-muted/50">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 px-4">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Contact & Rendez-vous
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            Contact
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            N'hésitez pas à me contacter pour discuter de vos projets ou prendre rendez-vous
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Restons en contact et discutons de vos projets
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8">
           {/* Formulaire de contact */}
-          <Card>
+          <Card className="border-2 hover:border-primary/20 transition-colors">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Mail className="h-5 w-5" />
+              <CardTitle className="text-2xl flex items-center gap-2">
+                <Send className="h-6 w-6 text-primary" />
                 Envoyez-moi un message
               </CardTitle>
               <CardDescription>
-                Remplissez le formulaire ci-dessous et je vous répondrai rapidement
+                Remplissez ce formulaire et je vous répondrai rapidement
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <Label htmlFor="nom">Nom complet *</Label>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="space-y-2">
+                  <Label htmlFor="nom">Nom complet</Label>
                   <Input
                     id="nom"
                     name="nom"
-                    type="text"
                     value={formData.nom}
                     onChange={handleChange}
-                    placeholder="Votre nom complet"
+                    placeholder="Votre nom et prénom"
                     required
                   />
                 </div>
                 
-                <div>
-                  <Label htmlFor="email">Email *</Label>
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email</Label>
                   <Input
                     id="email"
                     name="email"
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="votre.email@example.com"
+                    placeholder="votre@email.com"
                     required
                   />
                 </div>
                 
-                <div>
-                  <Label htmlFor="message">Message *</Label>
+                <div className="space-y-2">
+                  <Label htmlFor="message">Message</Label>
                   <Textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Décrivez votre projet ou votre demande..."
-                    rows={6}
+                    className="min-h-[120px]"
                     required
                   />
                 </div>
                 
                 <Button 
                   type="submit" 
-                  className="w-full"
+                  className="w-full" 
+                  size="lg"
                   disabled={isLoading}
                 >
-                  {isLoading ? (
-                    <>
-                      <div className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-background border-t-transparent" />
-                      Envoi en cours...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="mr-2 h-4 w-4" />
-                      Envoyer le message
-                    </>
-                  )}
+                  {isLoading ? "Envoi en cours..." : "Envoyer"}
+                  <Send className="h-4 w-4 ml-2" />
                 </Button>
               </form>
             </CardContent>
           </Card>
 
-          {/* Rendez-vous Calendly */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Calendar className="h-5 w-5" />
-                Planifiez un rendez-vous
-              </CardTitle>
-              <CardDescription>
-                Réservez directement un créneau pour discuter de vos projets
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="text-center">
-                <div className="bg-primary/10 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="h-10 w-10 text-primary" />
+          {/* Section rendez-vous et réseaux sociaux */}
+          <div className="space-y-8">
+            {/* Rendez-vous */}
+            <Card className="border-2 hover:border-primary/20 transition-colors" id="rendez-vous">
+              <CardHeader>
+                <CardTitle className="text-2xl flex items-center gap-2">
+                  <Calendar className="h-6 w-6 text-primary" />
+                  Prenez rendez-vous
+                </CardTitle>
+                <CardDescription>
+                  Réservez un créneau pour discuter de votre projet
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="p-4 bg-muted/50 rounded-lg">
+                  <h4 className="font-semibold mb-2">Consultation personnalisée</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Discutons de vos besoins en développement web, no-code ou intégrations API.
+                  </p>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">
-                  Consultation gratuite de 30 minutes
-                </h3>
-                <p className="text-muted-foreground mb-6">
-                  Discutons de vos besoins en cybersécurité, développement web ou tout autre projet technique.
-                </p>
-              </div>
+                
+                <Button 
+                  className="w-full" 
+                  size="lg"
+                  onClick={openCalendly}
+                >
+                  Réserver un créneau
+                  <ExternalLink className="h-4 w-4 ml-2" />
+                </Button>
+              </CardContent>
+            </Card>
 
-              <div className="space-y-3 text-sm">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span>Consultation gratuite de 30 minutes</span>
+            {/* Réseaux sociaux */}
+            <Card className="border-2 hover:border-primary/20 transition-colors">
+              <CardHeader>
+                <CardTitle className="text-xl">Suivez-moi</CardTitle>
+                <CardDescription>
+                  Retrouvez-moi sur les réseaux sociaux
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-2 gap-4">
+                  <Button variant="outline" size="lg" asChild className="h-16">
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2">
+                      <Youtube className="h-6 w-6 text-red-500" />
+                      <span className="text-sm">YouTube</span>
+                    </a>
+                  </Button>
+                  <Button variant="outline" size="lg" asChild className="h-16">
+                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2">
+                      <Music className="h-6 w-6 text-black" />
+                      <span className="text-sm">TikTok</span>
+                    </a>
+                  </Button>
+                  <Button variant="outline" size="lg" asChild className="h-16">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2">
+                      <Facebook className="h-6 w-6 text-blue-500" />
+                      <span className="text-sm">Facebook</span>
+                    </a>
+                  </Button>
+                  <Button variant="outline" size="lg" asChild className="h-16">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2">
+                      <Instagram className="h-6 w-6 text-pink-500" />
+                      <span className="text-sm">Instagram</span>
+                    </a>
+                  </Button>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span>Discussion sur vos projets techniques</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span>Conseils personnalisés</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span>Visioconférence ou appel téléphonique</span>
-                </div>
-              </div>
-
-              <Button 
-                onClick={openCalendly}
-                className="w-full"
-                size="lg"
-              >
-                <Calendar className="mr-2 h-4 w-4" />
-                Réserver un créneau
-              </Button>
-
-              <p className="text-xs text-muted-foreground text-center">
-                Vous serez redirigé vers Calendly pour choisir votre créneau
-              </p>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </section>
