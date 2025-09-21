@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Send, Youtube, Instagram, Facebook } from "lucide-react";
+import { Mail, Send, Youtube, Instagram, Facebook, Linkedin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
@@ -35,6 +35,13 @@ const ContactSection = () => {
   };
 
   const socialLinks = [
+    {
+      name: "LinkedIn",
+      icon: Linkedin,
+      url: "https://www.linkedin.com/in/douty-ibrahim-bamba-994577330/",
+      color: "hover:text-red-600",
+      bgColor: "hover:bg-red-50"
+    },
     {
       name: "YouTube",
       icon: Youtube,

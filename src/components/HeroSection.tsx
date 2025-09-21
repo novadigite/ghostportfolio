@@ -54,7 +54,7 @@ const HeroSection = () => {
           {/* Liens sociaux avec micro-interactions */}
           <div className="flex gap-4 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
             {[
-              { icon: Linkedin, href: "#", label: "LinkedIn" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/douty-ibrahim-bamba-994577330/", label: "LinkedIn" },
               { icon: Github, href: "#", label: "GitHub" },
               { icon: Mail, href: "mailto:contact@bambadoutyibrahim.com", label: "Email" }
             ].map((social, index) => (
