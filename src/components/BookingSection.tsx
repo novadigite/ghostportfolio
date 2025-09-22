@@ -80,7 +80,7 @@ const BookingSection = () => {
           </div>
           
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Planifions Votre
+            Planifions Votre Consultation
             <span className="block bg-gradient-to-r from-booking-primary via-booking-secondary to-booking-accent bg-clip-text text-transparent animate-glow">
               Projet Ensemble
             </span>
