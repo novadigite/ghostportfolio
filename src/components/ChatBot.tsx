@@ -19,7 +19,7 @@ const ChatBot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      content: "Bonjour ! Je suis l'assistant virtuel d'un développeur web passionné. Je peux vous renseigner sur ses compétences en Python/Django, no-code/low-code, ses projets et vous aider à le contacter. Comment puis-je vous aider ?",
+      content: "Bonjour ! Je suis l'assistant virtuel de BAMBA DOUTY IBRAHIM. Je peux vous renseigner sur ses compétences en Python/Django, no-code/low-code, ses projets et vous aider à le contacter. Comment puis-je vous aider ?",
       role: 'assistant',
       timestamp: new Date()
     }
