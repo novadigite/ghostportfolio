@@ -97,17 +97,23 @@ const ProjectsSection = () => {
                           variant="default" 
                           size="sm" 
                           className="flex-1 group/btn bg-brand-accent text-black hover:bg-brand-accent/90 hover:animate-neon-glow transition-all duration-300 font-semibold"
+                          asChild
                         >
-                          <ExternalLink className="h-4 w-4 mr-2 group-hover/btn:scale-110 transition-transform" />
-                          Voir le Projet
+                          <a href={`https://github.com/${project.repository}`} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="h-4 w-4 mr-2 group-hover/btn:scale-110 transition-transform" />
+                            Voir le Projet
+                          </a>
                         </Button>
                         <Button 
                           variant="outline" 
                           size="sm" 
                           className="border-brand-blue/30 text-brand-blue hover:bg-brand-blue hover:text-white hover:animate-blue-glow transition-all duration-300"
+                          asChild
                         >
-                          <Github className="h-4 w-4 mr-2" />
-                          Code
+                          <a href={`https://github.com/${project.repository}`} target="_blank" rel="noopener noreferrer">
+                            <Github className="h-4 w-4 mr-2" />
+                            Code
+                          </a>
                         </Button>
                       </>
                     )}

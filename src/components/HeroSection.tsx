@@ -55,7 +55,7 @@ const HeroSection = () => {
           <div className="flex gap-4 animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
             {[
               { icon: Linkedin, href: "https://www.linkedin.com/in/douty-ibrahim-bamba-994577330/", label: "LinkedIn" },
-              { icon: Github, href: "#", label: "GitHub" },
+              { icon: Github, href: "https://github.com/bambadoutyibrahim", label: "GitHub" },
               { icon: Mail, href: "mailto:contact@bambadoutyibrahim.com", label: "Email" }
             ].map((social, index) => (
               <Button
