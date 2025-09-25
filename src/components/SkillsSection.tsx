@@ -27,7 +27,7 @@ const SkillsSection = () => {
     },
     {
       title: "Production Numérique",
-      icon: IA
+      icon: IA,
       color: "text-brand-blue",
       glow: "blue-glow",
       skills: ["no-code/low-code", "Production numérique", "Montage",]
