@@ -26,11 +26,11 @@ const SkillsSection = () => {
       skills: ["Sécurisation des infrastructures", "Audit de sécurité", "Firewall", "IDS/IPS"]
     },
     {
-      title: "Intélligence Artificielle",
-      icon: Camera,
+      title: "Production Numérique",
+      icon: IA
       color: "text-brand-blue",
       glow: "blue-glow",
-      skills: ["no-code/low-code", "Vibe Coding" ]
+      skills: ["no-code/low-code", "Production numérique", "Montage",]
     }
   ];
 
